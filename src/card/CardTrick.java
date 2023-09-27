@@ -29,10 +29,10 @@ public class CardTrick {
             magicHand[i] = c;
 
         }
-        Card luckyCard = new Card;
+        Card luckyCard = new Card();
         luckyCard.setValue(1);
         luckyCard.setSuit("Clubs");
-        
+        /*
         Scanner userin = new Scanner(System.in); //user input in the scanner 
         System.out.println("Hello user pick a card any card, input the suit and value;");
 
@@ -42,7 +42,7 @@ public class CardTrick {
         Card userCard = new Card(); // creating a card for the user using their input
         userCard.setSuit(userSui);
         userCard.setValue(userVal);
-
+        */
         boolean compSuit = false; // condition of the comparison of users card and the cards in magic hand
         boolean compVal = false;
 
@@ -50,6 +50,7 @@ public class CardTrick {
         // while ensures that each element in the array is checked
         // the loop contains if statements with conditions that compare the suit and number values of the user's card and of the current card in the array
         // once the condition is met the compSuit and compVal are made true
+        /*
         do {
             if (userCard.getSuit().equals(magicHand[check].getSuit())) {
                 compSuit = true;
@@ -60,7 +61,19 @@ public class CardTrick {
             }
             ++check;
         } while (check < 7);
+        */
+        
+         do {
+            if (luckyCard.getSuit().equals(magicHand[check].getSuit())) {
+                compSuit = true;
+            }
 
+            if (luckyCard.getValue() == magicHand[check].getValue()) {
+                compVal = true;
+            }
+            ++check;
+        } while (check < 7);
+         
         //final statement that makes the final check, if both 'comp' values are true than a message is sent accordingly 
         if (compSuit == true && compVal == true) {
             System.out.println("You have selected the right card");
