@@ -29,7 +29,10 @@ public class CardTrick {
             magicHand[i] = c;
 
         }
-
+        Card luckyCard = new Card;
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Clubs");
+        
         Scanner userin = new Scanner(System.in); //user input in the scanner 
         System.out.println("Hello user pick a card any card, input the suit and value;");
 
